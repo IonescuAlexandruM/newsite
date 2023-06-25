@@ -6,339 +6,393 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-	<title>Alexandru Ionescu</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <title>Alexandru Ionescu</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!--<i class="fas fa-gamepad"></i>-->
-		<!-- Header -->
-		<header id="header">
-			<div class="logo">
-				<span class="fas fa-gamepad"></span>
-			</div>
-			<div class="content">
-				<div class="inner">
-					<h1>Alexandru Ionescu</h1>
-					<h2>Welcome to my portfolio </h2>
-					<p>C++ // Games programmer // Website developer</p>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!--<i class="fas fa-gamepad"></i>-->
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="fas fa-gamepad"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Alexandru Ionescu</h1>
+                    <h2>Welcome to my portfolio </h2>
+                    <p>
+                        C++ // C# // Games programmer // Website developer <br>
+                        Software developer
+                    </p>
 
-				</div>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#intro">Intro</a></li>
-					<li><a href="#work">Portfolio</a></li>
-					<li><a href="#about">Skills</a></li>
-					<li><a href="#contact">Socials</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</ul>
-			</nav>
-		</header>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#work">University work</a></li>
+                    <li><a href="#personal">Personal work</a></li>
+                    <li><a href="#about">Skills</a></li>
+                    <li><a href="#contact">Socials</a></li>
 
-
-		<!-- Style -->
-		<style>
-		video
-		{
-			max-width: 100%;
-			height: auto;
-		}
-
-		h3
-		{
-			margin-top: 2em;
-		}
-
-		img
-		{
-			max-width: 100%;
-			height: auto;
-			margin: 0 auto;
-			background-color: transparent;
-		}
-
-		#textures
-		{
-			display: inline;
-			width: 20%;
-			margin-right: 15px;
-			background-color: transparent;
-
-		}
-
-		</style>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Intro -->
-			<article id="intro">
-				<h2 class="major">Introduction</h2>
-				<span class="image main"><img src="images/pic01.jpeg" alt="" /></span>
-				<p>Hello, and welcome to my portfolio</p>
-				My name is Alexandru Ionescu, I am from Romania, Bucharest<br>
-				I have studied Mathematics and Informatics at "High School Miguel de Cervantes"<br>
-				Now I am a third year student, studying Games programming at "Staffordshire University"</p>
-				<span class="image main"><img src="images/FirstPage.png" alt="" /></span>
-					<span class="image main"><img src="images/SecondPage.png" alt="" /></span>
-				<li><a href="https://www.linkedin.com/in/alexandru-ionescu-mihai/" target="_blank" class="button"><span >View my LinkedIn profile</span></a></li>
-
-			</article>
-
-			<!-- Portfolio -->
-			<article id="work">
-				<h2 class="major">Portfolio</h2>
-				<h3>Low Level Games Programming // C++</h3>
-				<p>
-					Ray tracing is a technique used in computer graphics, to render shadows, reflections and refract lights. Classic ray tracing shoots
-					 invisible rays from the camera and traces the path as they bounce from object to object.<br> The main areas of this project were
-					 the optimizations techniques through the use of kernel threads and user level threads, file reading and writing optimizations, and the low
-					 level memory managenent. <br> For the memory manager, I made use of the C style operators "malloc" and "free", that are used to allocate
-					 and deallocate chunks of memory. The memory manager helps developers to find memory leaks easier, or check if any variable is overwriten.
-					 We can create a header and a footer for the memory we create, that way we can declare an unused variable in the header and footer, and
-					 check if that variable has changed at any point during the program.<br> The optimizations techniques I used are mainly based on
-					 threads, and Parallel tasking. If the program runs sequentional, with only one thread working on all images, the program is slow.
-					 Adding more worker threads helps with the performance of the program.<br>
-					 Sequentional time: 120 seconds<br>/-/-/-/-/-//-/-/-/-/-//-/-/-/-/-//-/-/-/-/-//-/-/-/-/-/<br>
-					 Threads time: 9 seconds
-				</p>
-				<p>
-					A representation of the project I managed to create is available here:
-				</p>
-				<video controls>
-					<source src="video/memory allocation.mp4" type="video/mp4">
-					</video>
-
-					<h3>3D // DirectX11 (Physics) // C++ // HLSL</h3>
-					<p>
-						The physics system I managed to create is a representation of forces applied to objects
-						of different masses. The first cube has a thrust force applied to it from below, that
-						launches it upwards when arrives in position(0,0,0), and another brake force that is applied
-						in the opposite direction, so only gravity can affect it and bring it back to ground.<br>
-						The second cube is a representation for Quaternion rotations. <br>
-						Cube 3 and cube 4 are a representation of velocity and acceleration being applied.
-						Cube 3 will move at the same speed whenever the button is pressed. Cube 4 will start moving
-						slowly, and then increase its speed over time. <br>
-						Cube 5 can be moved by player input, and can apply forces to the other game objects in the
-						scene. <br>
-						There are 2 types of collision detection implemented. AABB or axis aligned bounding box, which can be
-						visible on screen through the collision resolution applied to other objects, and sphere collision which
-						can be seen in the output window.
-					</p>
-					<p>
-						A representation of the game I managed to create is available here:
-					</p>
-					<video controls>
-						<source src="video/velocity and acceleration.mp4" type="video/mp4">
-						</video>
-
-						<h3>3D // DirectX11 (Graphics) // C++ // HLSL</h3>
-						<p>DirectX is a collection of APIs that you can use to create games and high-performance graphics applications.
-							DirectX11 graphics includes support for both 3D and 2D graphics. Direct3D is an industry standard, low-level
-							graphics API, used to draw primitives through the rendering pipeline, and enables us to render 3D worlds
-							using 3D hardware acceleration. The main competitor to Direct3D is OpenGL, because both APIs are commonly
-							used to create graphics for Windows PC.
-						</p>
-
-						<p>
-							The DirectX project I managed to make is a representation of a 3D scene, that contains 4 objects.
-							I made a real life cube out of paper to be able to visualize and understand the vertices.
-						</p>
-						<span class="image main"><img src="images/cube vertices.png" alt="" /></span>
-
-						<p>
-							On paper, I have drawn the wall's vertex coordinates, normals, and texture coordinates. The floor is scaling
-							up and down constantly, due to the time period passed since the last frame (delta time); At first, I implemented
-							the scaling into the shader calculations, all objects in the scene suffering the transformation.
-						</p>
-						<img width="40%" src="images/floor1.png" alt="" />
-						<img width="45%" src="images/floor2.png" alt="" />
-						<p>
-							For the airplane, we have been given an OBJ loader and the airplane model.
-							The pyramid is rotating around a pivot of coordinates(0,0,0).
-						</p>
-
-						<p>
-							For the lighting calculations, we needed to have a look at the vertex and fragment shaders, and alter
-							which variables get passed in the constant buffer, and use them to calculate the ambient, diffuse and specular
-							lights. Intellisense does not recognise HLSL code, which makes it harder to find errors. Towards the end of the
-							semester, we found that there is an extension that can be applied to Visual Studio, that helps developers
-							find errors easier.
-						</p>
-
-						<p>
-							A representation of the game I managed to create is available here:
-						</p>
-						<video controls>
-							<source src="video/DX11 graphics.mp4" type="video/mp4">
-							</video>
+                    <!--<li><a href="#elements">Elements</a></li>-->
+                </ul>
+            </nav>
+        </header>
 
 
-							<h3>Task based software engineering // C# // WPF // F#</h3>
-							<p>
-								This project was about designing a C# application that can deal with a large amount of data
-								query the data and make calculations based of the required data type. <br>
-								the project presents is a simple data reading algorithm, which calculates the sum between elements of a list,
-								depending on what the consumer wants to know.<br> For example, the consumer might want to find the cost of all orders available in the
-								supplied data, or the cost of the orders for a supplier type, in a week for a specific location. To do the calculation for every order,
-								a “Parallel.ForEach” does the job, if it has the reference to the correct set of data.<br> The easy way to do it is to use the correct
-								override method and reference the “orders” list where the data is stored and use a “Lambda” expression for performing the equation
-								for sum. The problem comes when different threads try to access the same variable at the same time, and different sums are shown at
-								the end of each run.
-							</p>
-							<p> I started with a console output, where the user can select what information he wants to access, then
-								I implemented the functionality to a WPF GUI.
-							</p>
-							<img width="100%" src="images/taskBasedConsole.png" alt="" />
+        <!-- Style -->
+        <style>
+            video {
+                max-width: 100%;
+                height: auto;
+            }
 
-							<p>
-								A representation of the game I managed to create is available here:
-							</p>
-							<video controls>
-								<source src="video/Taskbased.mp4" type="video/mp4">
-								</video>
+            h3 {
+                margin-top: 2em;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                background-color: transparent;
+            }
+
+            #textures {
+                display: inline;
+                width: 20%;
+                margin-right: 15px;
+                background-color: transparent;
+            }
+
+        </style>
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">Introduction</h2>
+                <span class="image main"><img src="images/pic01.jpeg" alt="" /></span>
+                <p>
+                    Hello, and welcome to my portfolio<br><br>
+                    My name is Alexandru Ionescu, I am from Romania, Bucharest<br>
+                    I have studied Mathematics and Informatics at "High School Miguel de Cervantes"<br>
+                    Now I am a third year student, studying Games programming at "Staffordshire University"
+                </p>
+                <span class="image main"><img src="images/FirstPage.png" alt="" /></span>
+                <span class="image main"><img src="images/SecondPage.png" alt="" /></span>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/alexandru-ionescu-mihai/" target="_blank" class="button"><span>View my LinkedIn profile</span></a></li>
+                </ul>
+            </article>
+
+            <!-- Portfolio -->
+            <article id="work">
+                <h2 class="major">Portfolio</h2>
+                <h3>Low Level Games Programming // C++</h3>
+                <p>
+                    Ray tracing is a technique used in computer graphics, to render shadows, reflections and refract lights. Classic ray tracing shoots
+                    invisible rays from the camera and traces the path as they bounce from object to object.<br> The main areas of this project were
+                    the optimizations techniques through the use of kernel threads and user level threads, file reading and writing optimizations, and the low
+                    level memory managenent. <br> For the memory manager, I made use of the C style operators "malloc" and "free", that are used to allocate
+                    and deallocate chunks of memory. The memory manager helps developers to find memory leaks easier, or check if any variable is overwriten.
+                    We can create a header and a footer for the memory we create, that way we can declare an unused variable in the header and footer, and
+                    check if that variable has changed at any point during the program.<br> The optimizations techniques I used are mainly based on
+                    threads, and Parallel tasking. If the program runs sequentional, with only one thread working on all images, the program is slow.
+                    Adding more worker threads helps with the performance of the program.<br>
+                    Sequentional time: 120 seconds<br>/-/-/-/-/-//-/-/-/-/-//-/-/-/-/-//-/-/-/-/-//-/-/-/-/-/<br>
+                    Threads time: 9 seconds
+                </p>
+                <p>
+                    A representation of the project I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/memory allocation.mp4" type="video/mp4">
+                </video>
+
+                <h3>3D // DirectX11 (Physics) // C++ // HLSL</h3>
+                <p>
+                    The physics system I managed to create is a representation of forces applied to objects
+                    of different masses. The first cube has a thrust force applied to it from below, that
+                    launches it upwards when arrives in position(0,0,0), and another brake force that is applied
+                    in the opposite direction, so only gravity can affect it and bring it back to ground.<br>
+                    The second cube is a representation for Quaternion rotations. <br>
+                    Cube 3 and cube 4 are a representation of velocity and acceleration being applied.
+                    Cube 3 will move at the same speed whenever the button is pressed. Cube 4 will start moving
+                    slowly, and then increase its speed over time. <br>
+                    Cube 5 can be moved by player input, and can apply forces to the other game objects in the
+                    scene. <br>
+                    There are 2 types of collision detection implemented. AABB or axis aligned bounding box, which can be
+                    visible on screen through the collision resolution applied to other objects, and sphere collision which
+                    can be seen in the output window.
+                </p>
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/velocity and acceleration.mp4" type="video/mp4">
+                </video>
+
+                <h3>3D // DirectX11 (Graphics) // C++ // HLSL</h3>
+                <p>
+                    DirectX is a collection of APIs that you can use to create games and high-performance graphics applications.
+                    DirectX11 graphics includes support for both 3D and 2D graphics. Direct3D is an industry standard, low-level
+                    graphics API, used to draw primitives through the rendering pipeline, and enables us to render 3D worlds
+                    using 3D hardware acceleration. The main competitor to Direct3D is OpenGL, because both APIs are commonly
+                    used to create graphics for Windows PC.
+                </p>
+
+                <p>
+                    The DirectX project I managed to make is a representation of a 3D scene, that contains 4 objects.
+                    I made a real life cube out of paper to be able to visualize and understand the vertices.
+                </p>
+                <span class="image main"><img src="images/cube vertices.png" alt="" /></span>
+
+                <p>
+                    On paper, I have drawn the wall's vertex coordinates, normals, and texture coordinates. The floor is scaling
+                    up and down constantly, due to the time period passed since the last frame (delta time); At first, I implemented
+                    the scaling into the shader calculations, all objects in the scene suffering the transformation.
+                </p>
+                <img width:"40%" src="images/floor1.png" alt="" />
+                <img width:"45%" src="images/floor2.png" alt="" />
+                <p>
+                    For the airplane, we have been given an OBJ loader and the airplane model.
+                    The pyramid is rotating around a pivot of coordinates(0,0,0).
+                </p>
+
+                <p>
+                    For the lighting calculations, we needed to have a look at the vertex and fragment shaders, and alter
+                    which variables get passed in the constant buffer, and use them to calculate the ambient, diffuse and specular
+                    lights. Intellisense does not recognise HLSL code, which makes it harder to find errors. Towards the end of the
+                    semester, we found that there is an extension that can be applied to Visual Studio, that helps developers
+                    find errors easier.
+                </p>
+
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/DX11 graphics.mp4" type="video/mp4">
+                </video>
+
+
+                <h3>Task based software engineering // C# // WPF // F#</h3>
+                <p>
+                    This project was about designing a C# application that can deal with a large amount of data
+                    query the data and make calculations based of the required data type. <br>
+                    the project presents is a simple data reading algorithm, which calculates the sum between elements of a list,
+                    depending on what the consumer wants to know.<br> For example, the consumer might want to find the cost of all orders available in the
+                    supplied data, or the cost of the orders for a supplier type, in a week for a specific location. To do the calculation for every order,
+                    a “Parallel.ForEach” does the job, if it has the reference to the correct set of data.<br> The easy way to do it is to use the correct
+                    override method and reference the “orders” list where the data is stored and use a “Lambda” expression for performing the equation
+                    for sum. The problem comes when different threads try to access the same variable at the same time, and different sums are shown at
+                    the end of each run.
+                </p>
+                <p>
+                    I started with a console output, where the user can select what information he wants to access, then
+                    I implemented the functionality to a WPF GUI.
+                </p>
+                <img width:"100%" src="images/taskBasedConsole.png" alt="" />
+
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/Taskbased.mp4" type="video/mp4">
+                </video>
 
 
 
-					<h3>Mario // C++</h3>
-					<p>In the first year, during the second semester at Staffordshire University, we have been required to create a 2D game in C++,
-						using SDL 2.0, that is simmilar to Mario Bros. A simple 2D game, with different levels,
-						enemies, tasks, or with an implemention of textures or animations. I managed to create a similar
-						experience with the actual game, by using similar textures,
-						but I have added my original ideas, such as a puzzle(level 2), and pixel art textures created by me.(grass, brick)
-					</p>
-					<img id="textures" src="images/Mariogangster.png" alt="" />
-					<img id="textures" src="images/dirt1.png" alt="" />
-					<img id="textures" src="images/brickpink.png" alt="" />
-					<img id="textures" src="images/brick.png" alt="" />
+                <h3>Mario // C++</h3>
+                <p>
+                    In the first year, during the second semester at Staffordshire University, we have been required to create a 2D game in C++,
+                    using SDL 2.0, that is simmilar to Mario Bros. A simple 2D game, with different levels,
+                    enemies, tasks, or with an implemention of textures or animations. I managed to create a similar
+                    experience with the actual game, by using similar textures,
+                    but I have added my original ideas, such as a puzzle(level 2), and pixel art textures created by me.(grass, brick)
+                </p>
+                <img id="textures" src="images/Mariogangster.png" alt="" />
+                <img id="textures" src="images/dirt1.png" alt="" />
+                <img id="textures" src="images/brickpink.png" alt="" />
+                <img id="textures" src="images/brick.png" alt="" />
 
-					<p>
-						A representation of the game I managed to create is available here:
-					</p>
-					<video controls>
-						<source src="video/mario no sound.mp4" type="video/mp4">
-						</video>
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/mario no sound.mp4" type="video/mp4">
+                </video>
 
-						<h3>Pacman // C++</h3>
-						<p>In the first year, I learned bit-by-bit how to create a 2D game, a representative game, "Pacman".
-							I remember that when I made pacman move up, down, left, and right,
-							I was so excited to learn how to improve the project, by implementing the ghosts, the menus.
-							For this project we used the library S2D, which helped us with the window handling,
-							input controls, audio, and drawing objects in 2D. To draw the map, I used pen and paper to
-							get the correct coordinates for the walls, and set the munchies on positions where the
-							player can get achieve them.
-						</p>
-						<span class="image main"><img src="images/wallsforpacman.jpeg" alt="" /></span>
-						<p>
-							A representation of the game I managed to create is available here:
-						</p>
-						<video controls>
-							<source src="video/Pacman gameplay.mp4" type="video/mp4">
-							</video>
+                <h3>Pacman // C++</h3>
+                <p>
+                    In the first year, I learned bit-by-bit how to create a 2D game, a representative game, "Pacman".
+                    I remember that when I made pacman move up, down, left, and right,
+                    I was so excited to learn how to improve the project, by implementing the ghosts, the menus.
+                    For this project we used the library S2D, which helped us with the window handling,
+                    input controls, audio, and drawing objects in 2D. To draw the map, I used pen and paper to
+                    get the correct coordinates for the walls, and set the munchies on positions where the
+                    player can get achieve them.
+                </p>
+                <span class="image main"><img src="images/wallsforpacman.jpeg" alt="" /></span>
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/Pacman gameplay.mp4" type="video/mp4">
+                </video>
 
-							<li><a href="https://github.com/IonescuAlexandruM/PacmanRep" target="_blank" class="button">
-								<span class="label">
-									View my repository on GitHub
-								</span>
-							</a></li>
+                <ul>
+                    <li>
+                        <a href="https://github.com/IonescuAlexandruM/PacmanRep" target="_blank" class="button">
+                            <span class="label">
+                                View my repository on GitHub
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Server-Chat architecture // WPF // C#</h3>
+                <p>
+                    WPF (WINDOWS PRESENTATION FOUNDATION), is a UI framework that creates desktop applications, or a server-client architecture.
+                    The framework has a similar interface experience with other .NET frameworks, so if you have previously worked with applications that
+                    are using ASP.net, Windows Forms, XML or HTML, the programming experience should be familiar. Syntactically, the language might
+                    be slightly different, for some of the wording, but the layout should be common. WPF uses the Extensible Application Markup
+                    Language (XAML), and can be used to display graphics, can be used to layout the features that you might want to implement.
+                    WPF can be used for a lot of different areas, such as chat communication, 2D and 3D graphics, the relationship between video and
+                    animation, data binding, styles and control templates. <br>
+                    At first I started with a simple console application, where a person was able to communicate with a computer.
+                </p>
+                <img width:"100%" src="images/chatServer.png" alt="" />
+                <p>
+                    Then I made a simple GUI, with multiple instances (chats), where you could enter a name and connect to the server.
+                    Messages that are sent by a user can be seen across the other clients.
+                </p>
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/CNA chat-server.mp4" type="video/mp4">
+                </video>
+
+                <h3>3D // OpenGL // C++</h3>
+                <p>
+                    3D OpenGL is a pretty hard to understand framework, in which you can add, change, move objects around the scene,
+                    objects that can have different colors, textures, dimensions,
+                    or objects that can have their size changed from the scene.	Lights and materials are important features for
+                    a game scene, features that can give your game a better perspective of a scene.
+                    OpenGL can be used to create a custiomizable game engine.
+                </p>
+
+                <p>
+                    A representation of the game I managed to create is available here:
+                </p>
+                <video controls>
+                    <source src="video/OPENGL video.mp4" type="video/mp4">
+                </video>
 
 
-							<h3>Server-Chat architecture // WPF // C#</h3>
-							<p>
-								WPF (WINDOWS PRESENTATION FOUNDATION), is a UI framework that creates desktop applications, or a server-client architecture.
-								The framework has a similar interface experience with other .NET frameworks, so if you have previously worked with applications that
-								are using ASP.net, Windows Forms, XML or HTML, the programming experience should be familiar. Syntactically, the language might
-								be slightly different, for some of the wording, but the layout should be common. WPF uses the Extensible Application Markup
-								Language (XAML), and can be used to display graphics, can be used to layout the features that you might want to implement.
-								WPF can be used for a lot of different areas, such as chat communication, 2D and 3D graphics, the relationship between video and
-								animation, data binding, styles and control templates. <br>
-								At first I started with a simple console application, where a person was able to communicate with a computer.
-							</p>
-							<img width="100%" src="images/chatServer.png" alt="" />
-							<p>
-								Then I made a simple GUI, with multiple instances (chats), where you could enter a name and connect to the server.
-								Messages that are sent by a user can be seen across the other clients.
-							</p>
-							<p>
-								A representation of the game I managed to create is available here:
-							</p>
-							<video controls>
-								<source src="video/CNA chat-server.mp4" type="video/mp4">
-								</video>
+            </article>
 
-								<h3>3D // OpenGL // C++</h3>
-								<p>3D OpenGL is a pretty hard to understand framework, in which you can add, change, move objects around the scene,
-									objects that can have different colors, textures, dimensions,
-									or objects that can have their size changed from the scene.	Lights and materials are important features for
-									a game scene, features that can give your game a better perspective of a scene.
-									OpenGL can be used to create a custiomizable game engine.
-								</p>
+            <!-- Personal work -->
+            <article id="personal">
+                <h2 class="major">Side projects</h2>
+                <h3>1. Find and Replace in multiple EXCEL files</h3>
+                <p>
+                    The idea behind this project was that I had been assigned to replace a specific
+                    generic sentence with another similar one, in more than 500 ".xls" files. Windows
+                    lets you open 10 files at a time, which takes time as well, in adition to the
+                    time it would take to find and replace manually using the built in function.<br>
+                    This is where I got the idea to create an application where you can select a folder
+                    where you have all the Excel files, opens each one, and if there is any cell value
+                    matching with the word we are looking for, it would change it to the other one.<br>
+                    This app will save a lot of time, since it takes only a few seconds to open the folder
+                    that contains all the files.<br>
+                    The program creates a copy of each files in case anything goes wrong, so they can be
+                    reverted to original.
+                    <br><br>
+                    A video of the app working:
+                </p>
 
-								<p>
-									A representation of the game I managed to create is available here:
-								</p>
-								<video controls>
-									<source src="video/OPENGL video.mp4" type="video/mp4">
-									</video>
+                <video controls poster="images/posterSearchandReplace.png">
+                    <source src="video/Video of how it works.mp4" type="video/mp4">
+                </video>
 
 
-							</article>
+                <h3>2. Generic website with included meeting scheduler</h3>
+                <p>
+                    I have been suggested a project idea to create a link that people can access
+                    anytime and schedule a meeting with a doctor, barber, shop, or any other type of
+                    business that requires meetings. To access the website
+                    <a href="https://ionescualexandrum.github.io/SitePentruMa/">CLICK HERE</a><br>
+                    The information on the website can be changed to match someone else's expectations,
+                    as well as the structure or design of the website.<br><br>
+                    The idea of this project was to implement the meeting scheduler, and to make
+                    it work without direct access to the customer's email account. This way, I can create
+                    a new workspace on my Microsoft account, asign the staff privileges based on the email
+                    address and share the booking page with customers. <br>
+                    The workspace has multiple options when it comes to assinging staff members,
+                    sending emails to the staff and customers such as reminders or feedback.
+                </p>
 
-							<!-- Skills -->
-							<article id="about">
-								<h2 class="major">Skills</h2>
-								<span class="image main"><img src="images/c++.png" alt="" /></span>
-								<p>One of the skills I am most confident with, is programming in C++. I started with learning pseudocode for C++, in order to understand the logic behind the program.
-									When I bought my PC a few years ago, I did not know how programming worked, and every time I was doing something new at school that I was not understanding,
-									I would have got home and tried by myself to solve the exercices from class. This is how I got started with programming.
-									My first program I worked on was "CodeBlocks", and with the pseudocode I knew, I managed to understand easier how to program using the namespace standard library.
-								</p>
-							</article>
+            </article>
 
-							<!-- Socials -->
-							<article id="contact">
-								<h2 class="major">Socials</h2>
+            <!-- Skills -->
+            <article id="about">
+                <h2 class="major">Skills</h2>
+                <span class="image main"><img src="images/c++.png" alt="" /></span>
+                <p>
+                    One of the skills I am most confident with, is programming in C++. I started with learning pseudocode for C++, in order to understand the logic behind the program.
+                    When I bought my PC a few years ago, I did not know how programming worked, and every time I was doing something new at school that I was not understanding,
+                    I would have got home and tried by myself to solve the exercices from class. This is how I got started with programming.
+                    My first program I worked on was "CodeBlocks", and with the pseudocode I knew, I managed to understand easier how to program using the namespace standard library.
+                </p>
+            </article>
 
-								<ul class="icons">
-									<p>To visit my Twitter page click here: 	<li><a href="https://twitter.com/AlexIonescuM" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li></p>
+            <!-- Socials -->
+            <article id="contact">
+                <h2 class="major">Socials</h2>
 
-									<p>To visit my Facebook page click here: 	<li><a href="https://www.facebook.com/alexandru.ionescu.3133" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li></p>
+                <p>To visit my social pages click here:</p>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/AlexIonescuM" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/alexandru.ionescu.3133" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/alex.ionie/?hl=ro" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/IonescuAlexandruM" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/alexandru-ionescu-mihai/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 
-									<p>To visit my Instagram page click here: 	<li><a href="https://www.instagram.com/alex.ionie/?hl=ro" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li></p>
+                </ul>
 
-									<p>To visit my GitHub page click here: 	<li><a href="https://github.com/IonescuAlexandruM" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li></p>
+            </article>
 
-									<p>To visit my LinkedIn page click here: 	<li><a href="https://www.linkedin.com/in/alexandru-ionescu-mihai/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li></p>
+            <!-- Elements -->
+            <article id="elements">
+                <h2 class="major">Elements</h2>
 
-								</ul>
-							</article>
-
-							<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h4>Blockquote</h4>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
+                <section>
+                    <h3 class="major">Text</h3>
+                    <p>
+                        This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                        This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                        This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.
+                    </p>
+                    <hr />
+                    <h2>Heading Level 2</h2>
+                    <h3>Heading Level 3</h3>
+                    <h4>Heading Level 4</h4>
+                    <h5>Heading Level 5</h5>
+                    <h6>Heading Level 6</h6>
+                    <hr />
+                    <h4>Blockquote</h4>
+                    <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                    <h4>Preformatted</h4>
+                    <pre><code>i = 0;
 
 											while (!deck.isInOrder()) {
 												print 'Iteration ' + i;
@@ -347,238 +401,238 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 											}
 
 											print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-										</section>
+                </section>
 
-										<section>
-											<h3 class="major">Lists</h3>
+                <section>
+                    <h3 class="major">Lists</h3>
 
-											<h4>Unordered</h4>
-											<ul>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
+                    <h4>Unordered</h4>
+                    <ul>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-											<h4>Alternate</h4>
-											<ul class="alt">
-												<li>Dolor pulvinar etiam.</li>
-												<li>Sagittis adipiscing.</li>
-												<li>Felis enim feugiat.</li>
-											</ul>
+                    <h4>Alternate</h4>
+                    <ul class="alt">
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-											<h4>Ordered</h4>
-											<ol>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis viverra.</li>
-												<li>Felis enim feugiat.</li>
-												<li>Dolor pulvinar etiam.</li>
-												<li>Etiam vel felis lorem.</li>
-												<li>Felis enim et feugiat.</li>
-											</ol>
-											<h4>Icons</h4>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-											</ul>
+                    <h4>Ordered</h4>
+                    <ol>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis viverra.</li>
+                        <li>Felis enim feugiat.</li>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis lorem.</li>
+                        <li>Felis enim et feugiat.</li>
+                    </ol>
+                    <h4>Icons</h4>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
 
-											<h4>Actions</h4>
-											<ul class="actions">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions stacked">
-												<li><a href="#" class="button primary">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-										</section>
+                    <h4>Actions</h4>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary">Default</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                    <ul class="actions stacked">
+                        <li><a href="#" class="button primary">Default</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                </section>
 
-										<section>
-											<h3 class="major">Table</h3>
-											<h4>Default</h4>
-											<div class="table-wrapper">
-												<table>
-													<thead>
-														<tr>
-															<th>Name</th>
-															<th>Description</th>
-															<th>Price</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>Item One</td>
-															<td>Ante turpis integer aliquet porttitor.</td>
-															<td>29.99</td>
-														</tr>
-														<tr>
-															<td>Item Two</td>
-															<td>Vis ac commodo adipiscing arcu aliquet.</td>
-															<td>19.99</td>
-														</tr>
-														<tr>
-															<td>Item Three</td>
-															<td> Morbi faucibus arcu accumsan lorem.</td>
-															<td>29.99</td>
-														</tr>
-														<tr>
-															<td>Item Four</td>
-															<td>Vitae integer tempus condimentum.</td>
-															<td>19.99</td>
-														</tr>
-														<tr>
-															<td>Item Five</td>
-															<td>Ante turpis integer aliquet porttitor.</td>
-															<td>29.99</td>
-														</tr>
-													</tbody>
-													<tfoot>
-														<tr>
-															<td colspan="2"></td>
-															<td>100.00</td>
-														</tr>
-													</tfoot>
-												</table>
-											</div>
+                <section>
+                    <h3 class="major">Table</h3>
+                    <h4>Default</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td> Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
 
-											<h4>Alternate</h4>
-											<div class="table-wrapper">
-												<table class="alt">
-													<thead>
-														<tr>
-															<th>Name</th>
-															<th>Description</th>
-															<th>Price</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>Item One</td>
-															<td>Ante turpis integer aliquet porttitor.</td>
-															<td>29.99</td>
-														</tr>
-														<tr>
-															<td>Item Two</td>
-															<td>Vis ac commodo adipiscing arcu aliquet.</td>
-															<td>19.99</td>
-														</tr>
-														<tr>
-															<td>Item Three</td>
-															<td> Morbi faucibus arcu accumsan lorem.</td>
-															<td>29.99</td>
-														</tr>
-														<tr>
-															<td>Item Four</td>
-															<td>Vitae integer tempus condimentum.</td>
-															<td>19.99</td>
-														</tr>
-														<tr>
-															<td>Item Five</td>
-															<td>Ante turpis integer aliquet porttitor.</td>
-															<td>29.99</td>
-														</tr>
-													</tbody>
-													<tfoot>
-														<tr>
-															<td colspan="2"></td>
-															<td>100.00</td>
-														</tr>
-													</tfoot>
-												</table>
-											</div>
-										</section>
+                    <h4>Alternate</h4>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td> Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
 
-										<section>
-											<h3 class="major">Buttons</h3>
-											<ul class="actions">
-												<li><a href="#" class="button primary">Primary</a></li>
-												<li><a href="#" class="button">Default</a></li>
-											</ul>
-											<ul class="actions">
-												<li><a href="#" class="button">Default</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-											</ul>
-											<ul class="actions">
-												<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-												<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											</ul>
-											<ul class="actions">
-												<li><span class="button primary disabled">Disabled</span></li>
-												<li><span class="button disabled">Disabled</span></li>
-											</ul>
-										</section>
+                <section>
+                    <h3 class="major">Buttons</h3>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary">Primary</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Default</a></li>
+                        <li><a href="#" class="button small">Small</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                        <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><span class="button primary disabled">Disabled</span></li>
+                        <li><span class="button disabled">Disabled</span></li>
+                    </ul>
+                </section>
 
-										<section>
-											<h3 class="major">Form</h3>
-											<form method="post" action="#">
-												<div class="fields">
-													<div class="field half">
-														<label for="demo-name">Name</label>
-														<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-													</div>
-													<div class="field half">
-														<label for="demo-email">Email</label>
-														<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-													</div>
-													<div class="field">
-														<label for="demo-category">Category</label>
-														<select name="demo-category" id="demo-category">
-															<option value="">-</option>
-															<option value="1">Manufacturing</option>
-															<option value="1">Shipping</option>
-															<option value="1">Administration</option>
-															<option value="1">Human Resources</option>
-														</select>
-													</div>
-													<div class="field half">
-														<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-														<label for="demo-priority-low">Low</label>
-													</div>
-													<div class="field half">
-														<input type="radio" id="demo-priority-high" name="demo-priority">
-														<label for="demo-priority-high">High</label>
-													</div>
-													<div class="field half">
-														<input type="checkbox" id="demo-copy" name="demo-copy">
-														<label for="demo-copy">Email me a copy</label>
-													</div>
-													<div class="field half">
-														<input type="checkbox" id="demo-human" name="demo-human" checked>
-														<label for="demo-human">Not a robot</label>
-													</div>
-													<div class="field">
-														<label for="demo-message">Message</label>
-														<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-													</div>
-												</div>
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" class="primary" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</form>
-										</section>
+                <section>
+                    <h3 class="major">Form</h3>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="demo-name">Name</label>
+                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                            </div>
+                            <div class="field half">
+                                <label for="demo-email">Email</label>
+                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                            </div>
+                            <div class="field">
+                                <label for="demo-category">Category</label>
+                                <select name="demo-category" id="demo-category">
+                                    <option value="">-</option>
+                                    <option value="1">Manufacturing</option>
+                                    <option value="1">Shipping</option>
+                                    <option value="1">Administration</option>
+                                    <option value="1">Human Resources</option>
+                                </select>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                <label for="demo-priority-low">Low</label>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="demo-priority-high" name="demo-priority">
+                                <label for="demo-priority-high">High</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-copy" name="demo-copy">
+                                <label for="demo-copy">Email me a copy</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                <label for="demo-human">Not a robot</label>
+                            </div>
+                            <div class="field">
+                                <label for="demo-message">Message</label>
+                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                </section>
 
-									</article>
+            </article>
 
-								</div>
+        </div>
 
-								<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Alexandru Ionescu, 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Alexandru Ionescu, 2023. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
 
-							</div>
+    </div>
 
-							<!-- BG -->
-							<div id="bg"></div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-							<!-- Scripts -->
-							<script src="assets/js/jquery.min.js"></script>
-							<script src="assets/js/browser.min.js"></script>
-							<script src="assets/js/breakpoints.min.js"></script>
-							<script src="assets/js/util.js"></script>
-							<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-						</body>
-						</html>
+</body>
+</html>
